@@ -47,11 +47,13 @@ smart-grid-app/
 │   └── secrets.toml      # Clés API (NE PAS COMMIT)
 ├── assets/               # Ressources statiques
 │   └── style.css         # CSS personnalisé (Dark Mode)
+├── queries/              # Les requetes de clustering
+│   ├── global_query.cypher             
+│   └── local_query.cypher        
 ├── components/           # Composants UI réutilisables
 │   └── sidebar.py        # Barre latérale de navigation
 ├── pages/                # Pages de l'application
 │   ├── 1_🌍_Vue_Globale.py
-│   ├── 2_🔌_Reseau_Physique.py
 │   └── 3_🤖_Assistant_IA.py
 ├── services/             # Logique métier (Backend)
 │   ├── neo4j_driver.py   # Gestionnaire de connexion BDD

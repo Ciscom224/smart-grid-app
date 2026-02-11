@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+build/
+dist/
+
+# --- Streamlit ---
+# Ne jamais uploader vos identifiants Neo4j !
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Data & Logs ---
+*.log
+data/
+temp/
+.ipynb_checkpoints

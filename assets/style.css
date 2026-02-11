@@ -1,0 +1,139 @@
+/* assets/style.css */
+
+/* =========================================
+   1. RESET & GLOBAL THEME (LIGHT MODE)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+.stApp {
+    background-color: #F0F2F6; /* Gris très clair (Standard Streamlit) */
+    color: #31333F; /* Gris foncé presque noir */
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/* =========================================
+   2. SIDEBAR STYLING
+   ========================================= */
+[data-testid="stSidebar"] {
+    background-color: #FFFFFF; /* Blanc */
+    border-right: 1px solid #E6E9EF; /* Bordure subtile */
+}
+
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] h3 {
+    color: #31333F;
+}
+
+/* Widgets Sidebar - Labels */
+[data-testid="stSidebar"] .stSelectbox label, 
+[data-testid="stSidebar"] .stSlider label,
+[data-testid="stSidebar"] .stRadio label {
+    color: #31333F !important;
+    font-weight: 600;
+}
+
+/* =========================================
+   3. CUSTOM KPI CARDS
+   ========================================= */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    background-color: #FFFFFF; /* Blanc */
+    border: 1px solid #E6E9EF;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Ombre légère */
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-color: #ddd;
+}
+
+.kpi-label {
+    font-size: 0.9rem;
+    color: #666; /* Gris moyen */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.kpi-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #31333F;
+}
+
+/* COULEURS (Restent vives pour le contraste) */
+.c-red { color: #FF4B4B; }
+.c-green { color: #00CC96; }
+.c-purple { color: #AB63FA; }
+.c-orange { color: #FFA15A; }
+
+/* =========================================
+   4. CONTAINERS & WIDGETS
+   ========================================= */
+.chart-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E9EF;
+    border-radius: 8px;
+    padding: 10px;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Boutons Streamlit */
+.stButton button {
+    background-color: #FFFFFF;
+    color: #31333F;
+    border: 1px solid #D3D3D3;
+    transition: all 0.2s;
+}
+
+.stButton button:hover {
+    border-color: #FF4B4B;
+    color: #FF4B4B;
+    background-color: #FFF5F5;
+}
+
+/* =========================================
+   5. CHAT INTERFACE
+   ========================================= */
+.stChatMessage {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E6E9EF;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Message Utilisateur (Fond légèrement différent) */
+div[data-testid="stChatMessage"]:nth-child(odd) {
+    background-color: #F8F9FB !important; /* Gris très pâle */
+    border-color: #E6E9EF;
+}
+
+/* Avatar Couleur */
+.stChatMessage .stChatMessageAvatar {
+    background-color: #FF4B4B;
+    color: white;
+}
+/* =========================================
+   AUTRES MISE A JOUR
+   ========================================= */
+.st-emotion-cache-1oe5cao,.st-emotion-cache-1oe5cao{
+    padding-top: 3rem !important;
+}
+.st-emotion-cache-z5fcl4{
+    padding: 3rem 1rem 10rem;
+}
