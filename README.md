@@ -18,23 +18,21 @@ Une application de **SMART-GRID-APP** pour la gestion et la visualisation de ré
 
 ---
 
-## 🚀 Fonctionnalités Clés
+# 🚀 Fonctionnalités
 
-* **🌍 Dashboard Interactif** : Visualisation des KPIs temps réel (Consommation, Production Solaire, Auto-suffisance) et courbes de charge.
-* **📍 Topologie Physique** : Carte interactive (Mapbox) affichant les câbles, consommateurs et producteurs avec mise en évidence dynamique.
-* **🤖 Assistant Intelligent (RAG)** : Chatbot capable de "discuter" avec le réseau (ex: *"Quelle est la charge du câble rue Lino Ventura ?"*) en interrogeant la base de graphe via LangChain.
-* **🕒 Simulation Temporelle** : Slider interactif pour simuler l'état du réseau à n'importe quelle heure de la journée (0h - 24h) et selon la saison.
-* **🔌 Modélisation Graphe** : Gestion des relations complexes (Bâtiment -> Quartier -> Câble -> Transformateur).
-
+* **Vue Territoriale (Global) :** Analyse par clusters IRIS et segments de réseau Enedis avec encerclement visuel (Halos) pour identifier les communautés énergétiques.
+* **Vue Focus (Local) :** Détail granulaire par bâtiment (Consommation vs Production solaire) autour d'un point d'intérêt.
+* **Graphiques Temps Réel :** Courbes de charge (24h) et typologies de clusters générées dynamiquement via Plotly.
+* **Architecture Géo-Graph :** Utilisation de Neo4j pour modéliser les relations topologiques entre le réseau électrique et le bâtiment.
 ---
 
 ## 🛠️ Stack Technique
 
-* **Frontend** : [Streamlit](https://streamlit.io/) (Interface Web Python).
-* **Base de Données** : [Neo4j](https://neo4j.com/) (Graph Database) pour stocker la topologie et les profils de consommation.
-* **Visualisation** : [Plotly Express](https://plotly.com/python/) & Graph Objects.
-* **IA & NLP** : [LangChain](https://www.langchain.com/) + OpenAI (GPT-3.5/4) pour le moteur RAG.
-* **Driver** : `neo4j-python-driver` pour les requêtes Cypher.
+* **Frontend :** [Streamlit](https://streamlit.io/)
+* **Base de Données :** [Neo4j](https://neo4j.com/) (Graph Database)
+* **Cartographie :** [Pydeck](https://deckgl.readthedocs.io/) (Mapbox GL)
+* **Visualisation :** [Plotly](https://plotly.com/python/)
+* **Langage :** Python 3.10+
 
 ---
 
@@ -53,11 +51,45 @@ smart-grid-app/
 ├── components/           # Composants UI réutilisables
 │   └── sidebar.py        # Barre latérale de navigation
 ├── pages/                # Pages de l'application
-│   ├── 1_🌍_Vue_Globale.py
-│   └── 3_🤖_Assistant_IA.py
+│   ├── 1_🌍_home.py
 ├── services/             # Logique métier (Backend)
-│   ├── neo4j_driver.py   # Gestionnaire de connexion BDD
-│   └── rag_engine.py     # Moteur d'Intelligence Artificielle
+│   └── neo4j_driver.py   # Gestionnaire de connexion BDD
 ├── data/                 # Données sources (JSON/CSV)
 ├── Home.py               # Point d'entrée de l'application
 └── requirements.txt      # Dépendances Python
+
+```
+## 📥 Installation
+
+1.  **Cloner le dépôt :**
+    ```bash
+    git clone [https://github.com/votre-compte/smart-grid-twin.git](https://github.com/votre-compte/smart-grid-twin.git)
+    cd smart-grid-twin
+    ```
+
+2.  **Installer les dépendances :**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Configurer les secrets :**
+    Créez un fichier `.streamlit/secrets.toml` à la racine :
+    ```toml
+    NEO4J_URI = "bolt://localhost:7687"
+    NEO4J_USER = "neo4j"
+    NEO4J_PASSWORD = "votre_mot_de_passe"
+    ```
+
+4.  **Lancer l'application :**
+    ```bash
+    streamlit run Home.py
+    ```
+
+## 👥 Auteurs
+
+* **CISSE Mamadou** [@ciscom224](https://github.com/Ciscom224)
+* **MANKAI Latifa** [@latifa](https://github.com/latifa)
+* **Nom Prénom** - *Développement Streamlit & DataViz* - [@votreusername](https://github.com/votreusername)
+
+---
+*Ce projet a été développé pour optimiser la planification énergétique locale et favoriser la transition vers des réseaux bas-carbone.*
