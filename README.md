@@ -1,4 +1,4 @@
-# ⚡ Smart Grid Digital Twin (Jumeau Numérique)
+# Projet Data GRID energy
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-ff4b4b)
@@ -54,7 +54,7 @@ smart-grid-app/
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone [Projet Data Grid](https://github.com/Ciscom224/smart-grid-app.git)
+    git clone (https://github.com/Ciscom224/smart-grid-app.git)
     ```
 
 2.  **Installer les dépendances :**
