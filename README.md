@@ -9,15 +9,6 @@ Une application de **SMART-GRID-APP** pour la gestion et la visualisation de ré
 
 ---
 
-## 📸 Aperçu
-
-| Dashboard Global | Assistant IA (Graph RAG) |
-|:---:|:---:|
-| ![Dashboard Screenshot](https://via.placeholder.com/400x200?text=Dashboard+Visual) | ![Chat Screenshot](https://via.placeholder.com/400x200?text=Assistant+IA) |
-*(Ajoutez ici vos captures d'écran de l'application)*
-
----
-
 # 🚀 Fonctionnalités
 
 * **Vue Territoriale (Global) :** Analyse par clusters IRIS et segments de réseau Enedis avec encerclement visuel (Halos) pour identifier les communautés énergétiques.
@@ -63,8 +54,7 @@ smart-grid-app/
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone [https://github.com/votre-compte/smart-grid-twin.git](https://github.com/votre-compte/smart-grid-twin.git)
-    cd smart-grid-twin
+    git clone [Projet Data Grid](https://github.com/Ciscom224/smart-grid-app.git)
     ```
 
 2.  **Installer les dépendances :**
