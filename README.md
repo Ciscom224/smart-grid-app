@@ -48,6 +48,7 @@ smart-grid-app/
 ├── data/                 # Données sources (JSON/CSV)
 ├── Home.py               # Point d'entrée de l'application
 └── requirements.txt      # Dépendances Python
+└── autres      # Rapport , presentation
 
 ```
 ## 📥 Installation
@@ -79,7 +80,7 @@ smart-grid-app/
 
 * **CISSE Mamadou** [@ciscom224](https://github.com/Ciscom224)
 * **MANKAI Latifa** [@latifa](https://github.com/latifa)
-* **Nom Prénom** - *Développement Streamlit & DataViz* - [@votreusername](https://github.com/votreusername)
+
 
 ---
 *Ce projet a été développé pour optimiser la planification énergétique locale et favoriser la transition vers des réseaux bas-carbone.*
